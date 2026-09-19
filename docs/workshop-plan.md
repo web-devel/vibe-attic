@@ -8,7 +8,7 @@ During this workshop, kids will use AI to help build a simple computer game. Ins
 
 - Audience: kids aged 9–15.
 - Duration: 45 minutes, with an optional extension to one hour.
-- Equipment: M1 MacBooks with a coding agent and local inference installed before the session. The current organizer plan is Pi, started with `ollama launch pi`, and the `qwen3.5:9b` model; RAM and rehearsal timings still need confirmation.
+- Equipment: M1 MacBooks with a coding agent and local inference installed before the session. The current organizer plan is Pi, started with `ollama launch pi`, and the `qwen3.6:27b` model; RAM and rehearsal timings still need confirmation.
 - Stack: native HTML, CSS, and JavaScript. Canvas draws the game. No framework, build step, package installation, remote assets, or game-time AI calls.
 - Game: a small dinosaur runner inspired by the familiar browser game, using our own simple drawings.
 - Start from the prepared game foundation so the local model can focus on small rule changes. While the agent prepares the working copy, the facilitator explains the architecture; continue that explanation if copying finishes early.
