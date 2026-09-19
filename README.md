@@ -10,12 +10,17 @@ The game uses **HTML, CSS, and JavaScript**, with a canvas for drawing. The plan
 - [M1 rehearsal guide](docs/m1-rehearsal.md)
 - [Short prompts for the kids](prompts/README.md)
 - [Agent instructions and technical defaults](AGENTS.md)
-- [Save-point conventions](checkpoints/README.md)
+- [Playable save points](checkpoints/README.md)
+- [Ready game foundation and extracted resources](foundation/README.md)
 
-For a first rehearsal, launch Pi in this repository's root and type [the short build prompt](prompts/01-build-runner.md). Kids type their own requests about the game; the technical details live in `AGENTS.md`, which Pi loads automatically. Those instructions direct the output to `game/index.html`, `game/style.css`, and `game/game.js`. Open the resulting HTML file in your browser, try the manual jump experiment, and type one feature request.
+For a first rehearsal, launch Pi in this repository's root and type [the short build prompt](prompts/01-build-runner.md). The agent copies the prepared [foundation](foundation/runner.html) to `index.html` if no working game exists. Kids then make the manual jump experiment and request one small rule change. The page, styles, and canvas drawings are already supplied; the local model edits only the requested behavior. Existing working games are preserved.
+
+Kids type their own requests; the technical details and short step guides live together in `AGENTS.md`, which Pi loads automatically. The working game remains one offline `index.html` with embedded CSS and JavaScript. Explain that the first step reuses prepared code and later steps generate edits. Full generation from scratch remains an explicit rehearsal option.
 
 Pi's project instruction filename is **`AGENTS.md`**, not `agent.md`. After changing it, restart Pi or run `/reload`. See [Pi's project-instruction documentation](https://pi.dev/docs/latest/quickstart#give-pi-project-instructions).
 
 ## Current status
 
-This repository contains the workshop context, candidate prompts, and rehearsal instructions. The prompts have not yet been tested on the M1. Generated games, verified save points, final student materials, and the presentation will be added after rehearsal.
+Five prepared save points are available, each as a single offline HTML file. Start with [the baseline runner](checkpoints/01-baseline.html), or choose a version from the [save-point guide](checkpoints/README.md). Double-click a file to play; no server or installation is needed.
+
+The save points and extracted foundation have automated checks for game behavior and self-contained assets. Browser playtesting on the M1 and timing the local-model prompts remain pending. These are prepared reference games, not recorded outputs of the M1 model. Final student materials and the presentation will follow rehearsal.

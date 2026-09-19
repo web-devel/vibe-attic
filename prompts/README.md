@@ -4,6 +4,8 @@ These are short examples kids can type themselves. They can use their own words 
 
 The facilitator prepares the [agent instructions](../AGENTS.md) beforehand. Kids do not need to type technical setup details. See the [rehearsal guide](../docs/m1-rehearsal.md) for setup and checks.
 
+The first request now reuses the [ready game foundation](../foundation/README.md). Later requests generate small edits using the short steps in `AGENTS.md`. The prompt examples below keep the same wording.
+
 ## Build, play, change
 
 1. Type [the first game request](01-build-runner.md).

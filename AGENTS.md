@@ -1,63 +1,50 @@
-# Vibe Attic workshop instructions
+# Workshop instructions
 
-This repository supports a 45–60 minute game-building workshop for kids aged 9–15. Participants type short requests describing what they want to play. These project instructions supply the implementation details; do not require the child to type them or use exact wording from the example prompts.
+Help kids aged 9–15 build and change a dinosaur runner. Keep explanations short and use generic terms rather than product names.
 
-## Scope and interaction
+For workshop materials or setup requests, work on those materials instead of building a game.
 
-- For game-building or game-editing requests, use your tools to create or change the game, rather than only returning code in chat. Work in `game/` relative to this repository root. Leave workshop documents, prompts, and checkpoints intact.
-- For facilitator requests to maintain workshop materials, instructions, or diagnostic files, follow that request's scope instead. Do not generate a game merely because these instructions were loaded.
-- Treat the child's explicit game choices as the requirements. Use the defaults below for unspecified details. Optional features are implemented only when requested, never all at once.
-- Keep replies short, friendly, and understandable to a child. Use generic terms such as model, coding assistant, and browser. Do not focus on product names.
-- Read the existing game before modifying it. Make a small targeted change, preserving unrelated behavior, art, and manually adjusted values. Do not regenerate a working game for a feature request.
+## Game rules and checks
 
-## Technical foundation
+When asked to build or change the game:
 
-- Use only `game/index.html`, `game/style.css`, and `game/game.js`. HTML contains the canvas, instructions, score, status, and controls; CSS styles the page; JavaScript implements and draws the game.
-- Use native HTML, CSS, JavaScript, and a 2D canvas. Opening `game/index.html` directly from disk must work. Use relative paths and an ordinary deferred script. No modules, fetch requests, libraries, packages, build tools, external assets, network calls, or game-time model calls.
-- Use an 800 × 300 logical canvas, scaled with CSS while preserving its aspect ratio. Draw a recognizable little pixel-style dinosaur and cacti using simple shapes. Keep the code small, with clearly named functions and brief comments for input, jumping, collision, and the animation loop.
-- Keep one `requestAnimationFrame` loop. Move objects using elapsed seconds, capped at 0.05 seconds per frame. Restart must reset state without creating another loop.
-- Use rectangle overlap for collisions. A diagnostic flag must draw the exact collision rectangles. Choose obstacle sizes and gaps that a normal jump can clear.
+- Create or edit `index.html` in the repository root. Keep all HTML, CSS, and JavaScript in that one file.
+- Use plain browser features and a 2D canvas. No libraries, packages, build tools, external assets, or network requests. The file must work when opened directly.
+- Use your file tools to make changes. Do not just print the code in chat.
+- Follow the child's requested rules. Add only requested features, and preserve their existing changes.
+- Make small edits. Start at `EDIT: CONFIG` or `EDIT: RULES`; read the page and drawings only when needed. Do not load all checkpoints or run their generator.
+- Keep code small and readable, with named functions and short comments for input, jumping, collisions, and drawing.
+- Put editable values in a `CONFIG` object near the start of the script. Start with `runSpeed: 300`, `jumpSpeed: 650`, `gravity: 2000`, `minObstacleGap: 1.4`, `maxObstacleGap: 2.0`, and `showHitboxes: false`. Preserve later edits.
+- Keep the dinosaur's horizontal position fixed and move cacti toward it. Use an upward velocity for jumping and gravity for landing.
+- Use one animation loop with elapsed seconds capped at 0.05. Restart resets the game without starting another loop.
+- Ignore repeated Space key events and prevent page scrolling. Use rectangle collisions; let `showHitboxes` display those rectangles.
+- Check the changed behavior and restart. Say what you actually checked, and give one simple playtest. Never claim browser testing you did not perform.
+- Briefly explain which rule changed and where to find it. Leave the foundation, prompts, checkpoint originals, and workshop documents intact during game requests.
 
-## Baseline runner defaults
+## Short step guides
 
-- Keep the dinosaur's horizontal position fixed; move one type of cactus from right to left. Remove cacti when they leave the screen.
-- Start ready. Space starts the run and counts as a jump. During play, Space jumps only from the ground. Ignore repeated keydown events and prevent Space from scrolling. Holding Space must not cause automatic jumps.
-- A jump sets upward vertical velocity. Gravity changes that velocity over time. Clamp the dinosaur to ground level on landing.
-- Touching a cactus ends the run and freezes gameplay. Award exactly one point when each cactus completely passes the dinosaur.
-- Show instructions, score, status, and an HTML Restart button. Restart clears obstacles, score, timers, and movement, then returns to ready.
-- Keep initial speed fixed. Do not add optional mechanics to the baseline.
+Use only the step the child requests. Their wording and values take priority over these examples.
 
-Place a clearly labeled `CONFIG` object at the top of `game.js`. Use these starting values on initial creation; preserve later manual changes:
+### 1. Start the game
 
-| Property | Default | Meaning |
-| --- | --- | --- |
-| `runSpeed` | `300` | Pixels per second |
-| `jumpSpeed` | `650` | Positive jump magnitude; initial vertical velocity is `-CONFIG.jumpSpeed` |
-| `gravity` | `2000` | Pixels per second squared, downward |
-| `minObstacleGap` | `1.4` | Minimum seconds between spawns |
-| `maxObstacleGap` | `2.0` | Maximum seconds between spawns |
-| `showHitboxes` | `false` | Draw collision rectangles when true |
+If root `index.html` is missing, copy `foundation/runner.html` there with a file tool. On the workshop laptop, `cp -n foundation/runner.html index.html` avoids overwriting existing work. The foundation already supplies the page, drawings, and working game. Say you reused it. If a working game exists, edit that instead. Build from scratch only when explicitly requested. Check jumping, scoring, collision, and restart.
 
-## Defaults for requested features
+### 2. Higher jump
 
-These sections describe implementation defaults, not features to add proactively. Adapt them if the participant explicitly asks for different behavior.
+Change only `CONFIG.jumpSpeed`, usually from 650 to 780. If the child wants to edit it manually, show them where instead. `jump()` applies `-CONFIG.jumpSpeed`; gravity brings the dinosaur down. Compare height after saving and refreshing. Keep the chosen value during later edits.
 
-### Double jump
+### 3A. Double jump
 
-Allow two separate Space presses before landing. Each gives an upward push using the current jump strength; a third press does nothing. The start press counts as the first jump. Holding the key must not consume extra jumps. Landing and restart reset the allowance. Update the visible instructions.
+Add `state.jumpsUsed = 0`. In `jump()`, replace the airborne guard with a two-jump limit, increment the counter, then apply the usual jump velocity. Reset the counter on landing and in `restart()`. Keep the game-over and repeated-key guards; update the jump hint. Check two presses work, a third airborne press is ignored, and landing and restart restore the allowance.
 
-### Moon mode
+### 3B. Moon mode
 
-Add an HTML checkbox available while ready, disabled during play and after game over until restart. Normal mode uses the configured gravity; Moon mode uses 55% of it. Derive effective gravity without mutating the base value or compounding the multiplier. Keep jump strength and obstacle speed unchanged. Restart keeps the selected mode while resetting the run. Explain in the visible instructions that the mode is chosen before starting.
+Add a labeled `moon` checkbox in `.controls` and its DOM reference. Add `moonGravityFactor: 0.55` to `CONFIG`. In `update()`, use normal gravity times that factor when checked; never change `CONFIG.gravity` itself. In `updateHud()`, disable the checkbox unless the game is ready. Restart keeps its selection. Preserve the INPUT key exception so Space can toggle the checkbox. Check longer airtime, control locking, restart, and switching back to normal gravity.
 
-### Progressive speed
+### 3C. Increasing speed
 
-Use the configured starting speed multiplied by `min(1 + floor(score / 5) * 0.1, 1.8)`. Apply it to all moving cacti, show the multiplier beside the score, and reset it to 1.0 on restart. Do not mutate `CONFIG.runSpeed` or compound increases each frame. Preserve spawn timing, obstacle sizes, and jumping.
+Add CONFIG values `speedStepPoints: 5`, `speedStep: 0.1`, and `maxSpeedMultiplier: 1.8`. A `speedMultiplier()` helper returns `Math.min(1 + Math.floor(state.score / CONFIG.speedStepPoints) * CONFIG.speedStep, CONFIG.maxSpeedMultiplier)`. Use `CONFIG.runSpeed * speedMultiplier()` for all cactus movement; never multiply the saved base speed. Add a speed output in `.toolbar` and refresh it in `updateHud()`. Check scores 0, 5, 10, 40, 45 give 1.0, 1.1, 1.2, 1.8, 1.8; restart returns to 1.0.
 
-## Checking and explaining changes
+### 4. Repair
 
-- Inspect file paths and affected logic. Baseline checks cover start, jump, landing, held-key behavior, scoring once per obstacle, collision, and repeated restart. Avoid installing a test framework for this small game.
-- For double jump, check the second jump, blocked third jump, held key, landing reset, and restart. For Moon mode, check both modes, switching between runs, and restart. For progressive speed, check scores 0, 4, 5, 9, 10, 40, and 45, plus restart. Remove any temporary test values.
-- If something breaks, use the child's observed behavior, expected behavior, and reproduction steps to make the smallest repair. Ask a short question only if a missing observation prevents diagnosis.
-- Report only checks actually performed. Do not claim to have seen or tested the browser without doing so. If browser testing is unavailable, say so briefly and give one concrete playtest.
-- After a build, say how to open the game and where jump strength is controlled. After an edit, briefly connect the child's request to the changed rule and a visible result. Do not print the whole source or give a long technical report.
+Use what the child did, saw, and expected. Read the relevant function and fix that problem without replacing the game. Reuse existing feature state or controls instead of duplicating them. Repeat the reported action and check restart. If the facilitator requests recovery, follow `checkpoints/README.md`: stop pending edits, back up the working file, then copy the selected checkpoint.

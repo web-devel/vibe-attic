@@ -2,6 +2,8 @@
 
 Each checkpoint is **one standalone HTML file** with embedded CSS, JavaScript, and canvas drawings. Double-click it in Finder to play. No model, installation, server, internet connection, or companion files are needed.
 
+For the default local-model workshop route, use the [ready game foundation](../foundation/README.md) extracted from checkpoint 01. It labels the reusable resources; short step guides live in [AGENTS.md](../AGENTS.md). These original save points remain available for comparison and recovery.
+
 ## Choose a save point
 
 | File | What it contains |
@@ -32,7 +34,7 @@ For the manual jump experiment, find `CONFIG` near the start of the embedded scr
 
 These are prepared reference implementations created with the repository's coding assistant. They are not recorded outputs or performance measurements from the M1 local model. Each file includes a short HTML comment with its suggested prompt and the change represented by that stage.
 
-Thirty automated checks pass using Node's built-in test runner. They execute the actual embedded game scripts with a simulated DOM, canvas, and animation clock. Coverage includes jumping and landing, held-key handling, successful cactus clearance, collision, scoring once per cactus, frozen game-over state, repeated restart, frame-time limits, all three optional features, and high-jump camera behavior. Static checks confirm that the files reference no external assets or network APIs.
+Thirty automated checks cover the five checkpoints, with five more covering the extracted foundation, using Node's built-in test runner. They execute the actual embedded game scripts with a simulated DOM, canvas, and animation clock. Coverage includes jumping and landing, held-key handling, successful cactus clearance, collision, scoring once per cactus, frozen game-over state, repeated restart, frame-time limits, all three optional features, and high-jump camera behavior. Static checks confirm that the files reference no external assets or network APIs.
 
 These checks do not verify actual browser rendering or browser event delivery. The available preview browser blocked local-file URLs, so browser playtesting was not completed here. Open each file in the intended M1 browser and follow the [rehearsal checklist](../docs/m1-rehearsal.md) before the workshop. In particular, check keyboard focus, checkbox operation, layout, and real jump timing.
 
