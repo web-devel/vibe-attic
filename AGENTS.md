@@ -4,11 +4,13 @@ Help kids aged 9–15 build and change a dinosaur runner. Keep explanations shor
 
 For workshop materials or setup requests, work on those materials instead of building a game.
 
+After completing and checking each step, save it in a separate local Git commit with a short, descriptive message. Stage only the files changed for that step; leave unrelated work alone. Do not push commits.
+
 ## Game rules and checks
 
 When asked to build or change the game:
 
-- Create or edit `index.html` in the repository root. Keep all HTML, CSS, and JavaScript in that one file.
+- Generate the playable game into `index.html` in the repository root, and make all later game edits there. Keep all HTML, CSS, and JavaScript in that one file.
 - Use plain browser features and a 2D canvas. No libraries, packages, build tools, external assets, or network requests. The file must work when opened directly.
 - Use your file tools to make changes. Do not just print the code in chat.
 - Follow the child's requested rules. Add only requested features, and preserve their existing changes.
