@@ -9,6 +9,7 @@ The game uses **HTML, CSS, and JavaScript**, with a canvas for drawing. The plan
 - [Workshop plan and agreed context](docs/workshop-plan.md)
 - [M1 rehearsal guide](docs/m1-rehearsal.md)
 - [Short prompts for the kids](prompts/README.md)
+- [Slides for the TV](presentation/index.html): setup steps, the prompts, and the architecture diagram. Open the file in a browser; press `F` for fullscreen and `O` for an overview.
 - [Agent instructions and technical defaults](AGENTS.md)
 - [Playable save points](checkpoints/README.md)
 - [Ready game foundation and extracted resources](foundation/README.md)
@@ -23,4 +24,4 @@ Pi's project instruction filename is **`AGENTS.md`**, not `agent.md`. After chan
 
 Five prepared save points are available, each as a single offline HTML file. Start with [the baseline runner](checkpoints/01-baseline.html), or choose a version from the [save-point guide](checkpoints/README.md). Double-click a file to play; no server or installation is needed.
 
-The save points and extracted foundation have automated checks for game behavior and self-contained assets. Browser playtesting on the M1 and timing the local-model prompts remain pending. These are prepared reference games, not recorded outputs of the M1 model. Final student materials and the presentation will follow rehearsal.
+The save points and extracted foundation have automated checks for game behavior and self-contained assets. Browser playtesting on the M1 and timing the local-model prompts remain pending. These are prepared reference games, not recorded outputs of the M1 model. A first version of the TV slides is in `presentation/`; it repeats the prompt wording, so update both together. Final student materials and rehearsal-based slide changes will follow.

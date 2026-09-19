@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibe Coding — workshop slides</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="deck.js"></script>
+</head>
+<body>
+<!--
+  TV deck for the Vibe Attic workshop. Open this file directly in a browser; no server or network needed.
+
+  Keys: → / Space / PageDown = next · ← / PageUp = back · F = fullscreen · O = overview · B = black screen
+  Each <section class="slide"> is one slide; add, remove, or reorder them freely. Numbering is automatic.
+  Elements with data-step="n" appear one press at a time.
+  Prompt wording mirrors ../prompts/*.md. Keep the two in sync when either changes.
+-->
+<main class="stage" id="stage">
+
+  <!-- 1 · Title -->
+  <section class="slide slide--title" data-title="Vibe Coding" data-accent="pink">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-mint" style="--x:1010px;--y:96px;--s:30px"></i>
+      <i class="sh sh-dot-lime" style="--x:1150px;--y:94px;--s:32px;--delay:-3s"></i>
+      <i class="sh sh-dash" style="--x:1200px;--y:104px;--w:86px;--h:13px;--delay:-3s"></i>
+      <i class="sh sh-plus" style="--x:1450px;--y:78px;--s:52px;--delay:-5s"></i>
+      <i class="sh sh-sun" style="--x:1610px;--y:150px;--s:150px;--delay:-2s"></i>
+      <i class="sh sh-dot-pink" style="--x:1500px;--y:270px;--s:34px;--delay:-6s"></i>
+      <i class="sh sh-vline" style="--x:1840px;--y:420px;--h:130px;--delay:-4s"></i>
+    </div>
+    <div class="title-copy">
+      <div class="title-kicker">
+        <span class="badge">5</span>
+        <span class="tag" style="--c:var(--pink)">Workshop</span>
+      </div>
+      <h1 class="mega">Vibe<br>coding</h1>
+      <p class="tag tag--lg" style="--c:var(--green)">Build your own<br>dinosaur game — with AI</p>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <div class="scene-track">
+        <div class="scene-cactus"><span data-sprite="cactus" data-cell="12"></span></div>
+        <div class="scene-runner"><span data-sprite="dino" data-cell="12" data-run="true"></span></div>
+      </div>
+      <div class="scene-ground"><span>Ground</span></div>
+    </div>
+    <p class="keys-hint">→ next &nbsp;·&nbsp; F fullscreen &nbsp;·&nbsp; O overview</p>
+  </section>
+
+  <!-- 2 · Get ready: log in -->
+  <section class="slide" data-title="Get ready 1 · Log in" data-accent="yellow">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-mint" style="--x:1030px;--y:98px;--s:28px"></i>
+      <i class="sh sh-plus" style="--x:1240px;--y:84px;--s:46px;--delay:-4s"></i>
+      <i class="sh sh-chev" style="--x:1730px;--y:800px;--s:96px;--delay:-2s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--yellow)">Get ready</span>
+      <div class="stepper"><span>Step 1 / 4</span><ol class="dots"><li class="on"></li><li></li><li></li><li></li></ol></div>
+    </header>
+    <div class="headline"><span class="badge">1</span><h1 class="h1 fit">Log in</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Password</span><span class="dim">It's a countdown!</span></div>
+      <div class="panel-body panel-body--cmd">
+        <span class="cmd cmd--password fit" style="--c:var(--yellow)">87654321</span>
+      </div>
+    </div>
+    <div class="after"><span>Then press</span><kbd class="key key--wide"><b>⏎</b> Enter</kbd></div>
+  </section>
+
+  <!-- 3 · Get ready: open Terminal -->
+  <section class="slide" data-title="Get ready 2 · Open Terminal" data-accent="yellow">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-lime" style="--x:1040px;--y:96px;--s:30px"></i>
+      <i class="sh sh-dash" style="--x:1088px;--y:105px;--w:80px;--h:12px"></i>
+      <i class="sh sh-dot-pink" style="--x:1330px;--y:92px;--s:30px;--delay:-5s"></i>
+      <i class="sh sh-caret" style="--x:1700px;--y:820px;--s:100px;--delay:-3s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--yellow)">Get ready</span>
+      <div class="stepper"><span>Step 2 / 4</span><ol class="dots"><li class="on"></li><li class="on"></li><li></li><li></li></ol></div>
+    </header>
+    <div class="headline"><span class="badge">2</span><h1 class="h1 fit">Open Terminal</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Find it with Spotlight</span><span class="dim">The Mac's search box</span></div>
+      <div class="panel-body flow">
+        <div class="flow-item">
+          <span class="flow-cap">Press together</span>
+          <div class="flow-keys"><kbd class="key"><b>⌘</b> cmd</kbd><span class="plus-sign">+</span><kbd class="key key--space">space</kbd></div>
+        </div>
+        <i class="chev-sep" aria-hidden="true"></i>
+        <div class="flow-item">
+          <span class="flow-cap">Type</span>
+          <span class="cmd cmd--md" style="--c:var(--green)">terminal</span>
+        </div>
+        <i class="chev-sep" aria-hidden="true"></i>
+        <div class="flow-item">
+          <span class="flow-cap">Press</span>
+          <kbd class="key key--wide"><b>⏎</b> Enter</kbd>
+        </div>
+      </div>
+    </div>
+    <div class="after">
+      <span class="term-icon" aria-hidden="true">&gt;_</span>
+      <span class="dim">Or click this icon in the Dock. A window with text appears — that's the Terminal.</span>
+    </div>
+  </section>
+
+  <!-- 4 · Get ready: cd vibe-attic -->
+  <section class="slide" data-title="Get ready 3 · cd vibe-attic" data-accent="yellow">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-plus sh-plus--teal" style="--x:1100px;--y:84px;--s:46px"></i>
+      <i class="sh sh-dot-coral" style="--x:1300px;--y:96px;--s:30px;--delay:-4s"></i>
+      <i class="sh sh-vline" style="--x:1838px;--y:760px;--h:120px;--delay:-2s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--yellow)">Get ready</span>
+      <div class="stepper"><span>Step 3 / 4</span><ol class="dots"><li class="on"></li><li class="on"></li><li class="on"></li><li></li></ol></div>
+    </header>
+    <div class="headline"><span class="badge">3</span><h1 class="h1 fit">Go to the project</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Type this in the Terminal</span><span class="dim">cd = change directory (folder)</span></div>
+      <div class="panel-body panel-body--cmd">
+        <span class="cmd fit" style="--c:var(--green)"><span>cd</span><span class="gap" data-label="space"> </span><span>vibe</span><span class="gap gap--char" data-label="minus">-</span><span>attic</span><i class="cursor" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="after"><span>Then press</span><kbd class="key key--wide"><b>⏎</b> Enter</kbd></div>
+  </section>
+
+  <!-- 5 · Get ready: ollama launch pi -->
+  <section class="slide" data-title="Get ready 4 · ollama launch pi" data-accent="yellow">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-mint" style="--x:1080px;--y:98px;--s:28px"></i>
+      <i class="sh sh-dot-pink" style="--x:1290px;--y:92px;--s:32px;--delay:-5s"></i>
+      <i class="sh sh-chev" style="--x:1740px;--y:805px;--s:92px;--delay:-3s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--yellow)">Get ready</span>
+      <div class="stepper"><span>Step 4 / 4</span><ol class="dots"><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li></ol></div>
+    </header>
+    <div class="headline"><span class="badge">4</span><h1 class="h1 fit">Start your assistant</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Type this in the Terminal</span><span class="dim">The AI model runs on your laptop</span></div>
+      <div class="panel-body panel-body--cmd">
+        <span class="cmd fit" style="--c:var(--green)"><span>ollama</span><span class="gap" data-label="space"> </span><span>launch</span><span class="gap" data-label="space"> </span><span>pi</span><i class="cursor" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="after"><span>Then press</span><kbd class="key key--wide"><b>⏎</b> Enter</kbd></div>
+  </section>
+
+  <!-- 6 · Ready check -->
+  <section class="slide" data-title="Ready check" data-accent="yellow">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-sun" style="--x:1560px;--y:250px;--s:170px"></i>
+      <i class="sh sh-dot-pink" style="--x:1480px;--y:210px;--s:32px;--delay:-4s"></i>
+      <i class="sh sh-plus" style="--x:1770px;--y:180px;--s:48px;--delay:-2s"></i>
+      <i class="sh sh-caret" style="--x:1640px;--y:810px;--s:96px;--delay:-5s"></i>
+      <i class="sh sh-chev" style="--x:1520px;--y:800px;--s:96px;--delay:-1s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--yellow)">Get ready</span>
+      <div class="stepper"><span>All four steps</span></div>
+    </header>
+    <div class="split split--table">
+      <table class="grid-table">
+        <thead><tr><th>Step</th><th>Type / press</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ring">1</span>Log in</td><td><code style="--c:var(--yellow)">87654321</code></td></tr>
+          <tr><td><span class="ring">2</span>Open Terminal</td><td><span class="mini-keys"><kbd>⌘</kbd>+<kbd>space</kbd></span> <code style="--c:var(--green)">terminal</code></td></tr>
+          <tr><td><span class="ring">3</span>Go to the project</td><td><code style="--c:var(--green)">cd vibe-attic</code></td></tr>
+          <tr><td><span class="ring">4</span>Start your assistant</td><td><code style="--c:var(--green)">ollama launch pi</code></td></tr>
+        </tbody>
+      </table>
+      <div class="ready-call">
+        <p class="tag tag--lg" style="--c:var(--green)">All set?<br>Hands up!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · Prompt 1: start (../prompts/01-build-runner.md). The assistant copies foundation/runner.html to index.html. -->
+  <section class="slide" data-title="Prompt 1 · Start your game" data-accent="pink">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-lime" style="--x:1180px;--y:96px;--s:30px"></i>
+      <i class="sh sh-dash" style="--x:1228px;--y:105px;--w:80px;--h:12px"></i>
+      <i class="sh sh-plus" style="--x:1480px;--y:82px;--s:48px;--delay:-4s"></i>
+      <i class="sh sh-sun" style="--x:1660px;--y:120px;--s:110px;--delay:-2s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--pink)">Prompt 1</span>
+    </header>
+    <div class="headline"><h1 class="h1 fit">Start your game</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Type this</span><span class="dim">…or say it your own way</span></div>
+      <div class="panel-body prompt">
+        <i class="prompt-mark" aria-hidden="true"></i>
+        <p class="prompt-text">Make a dinosaur game. Press Space to jump over cacti. If I hit a cactus, the game ends. Give me a point for each cactus I pass and a button to play again.<i class="cursor" aria-hidden="true"></i></p>
+      </div>
+    </div>
+    <div class="after"><span>Then press</span><kbd class="key key--wide"><b>⏎</b> Enter</kbd><span class="dim">It begins with a prepared starter game. You change the rules next.</span></div>
+  </section>
+
+  <!-- 8 · What is happening inside? (diagram from ../docs/workshop-plan.md, revealed in steps; the starter-game copy is its own step) -->
+  <section class="slide" data-title="What is happening inside?" data-accent="cyan">
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--cyan)">While it gets ready</span>
+    </header>
+    <div class="headline headline--tight"><h1 class="h1 h1--sm fit">What is happening inside?</h1></div>
+    <svg class="diagram" viewBox="0 0 1680 640" role="img" aria-label="Your request and the prepared instructions go to the coding assistant. It talks to the AI model and reads and changes one game file, index.html. That file starts as a copy of a prepared starter game. The browser runs the game from it.">
+      <defs>
+        <marker id="ah-pink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#ff2494"/></marker>
+        <marker id="ah-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#fd8300"/></marker>
+        <marker id="ah-violet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#b6adff"/></marker>
+        <marker id="ah-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#04f05c"/></marker>
+        <marker id="ah-yellow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#f8ee06"/></marker>
+        <marker id="ah-magenta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#ff5bf4"/></marker>
+      </defs>
+
+      <!-- Always visible: request → assistant -->
+      <g class="node" style="--c:#ff2494">
+        <rect x="2" y="20" width="452" height="164"/>
+        <text class="node-title" x="30" y="80">Your request</text>
+        <text class="node-sub" x="30" y="124">“Make a dinosaur</text>
+        <text class="node-sub" x="30" y="160">game…”</text>
+      </g>
+      <g class="node" style="--c:#b6adff">
+        <rect x="560" y="195" width="400" height="250"/>
+        <text class="node-title" x="588" y="262">Coding</text>
+        <text class="node-title" x="588" y="310">assistant</text>
+        <text class="node-sub" x="588" y="362">gathers the context,</text>
+        <text class="node-sub" x="588" y="400">runs the tools</text>
+      </g>
+      <path class="wire" style="--c:#ff2494" marker-end="url(#ah-pink)" d="M454 102 H506 V262 H552"/>
+
+      <!-- Step 1: prepared instructions -->
+      <g data-step="1">
+        <g class="node" style="--c:#fd8300">
+          <rect x="2" y="238" width="452" height="164"/>
+          <text class="node-title" x="30" y="298">Instructions</text>
+          <text class="node-sub" x="30" y="342">prepared in advance:</text>
+          <text class="node-sub" x="30" y="378">defaults + step guides</text>
+        </g>
+        <path class="wire" style="--c:#fd8300" marker-end="url(#ah-orange)" d="M454 340 H552"/>
+      </g>
+
+      <!-- Step 2: the model -->
+      <g data-step="2">
+        <g class="node" style="--c:#04f05c">
+          <rect x="1240" y="2" width="438" height="186"/>
+          <text class="node-title" x="1268" y="64">AI model</text>
+          <text class="node-sub" x="1268" y="110">runs on this laptop,</text>
+          <text class="node-sub" x="1268" y="148">writes text and code</text>
+        </g>
+        <path class="wire" style="--c:#b6adff" marker-end="url(#ah-violet)" d="M700 195 V60 H1232"/>
+        <text class="wire-label" x="722" y="42">context + tools</text>
+        <path class="wire" style="--c:#04f05c" marker-end="url(#ah-green)" d="M1240 130 H860 V187"/>
+        <text class="wire-label" x="882" y="170">text + tool requests</text>
+      </g>
+
+      <!-- Step 3: the one game file -->
+      <g data-step="3">
+        <g class="node" style="--c:#f8ee06">
+          <rect x="1240" y="215" width="438" height="210"/>
+          <text class="node-title" x="1268" y="275">Your game</text>
+          <text class="node-sub node-sub--mono" x="1268" y="322">index.html</text>
+          <text class="node-sub node-sub--sm" x="1268" y="364">HTML + CSS + JavaScript</text>
+          <text class="node-sub node-sub--sm" x="1268" y="398">in one file</text>
+        </g>
+        <path class="wire" style="--c:#b6adff" marker-end="url(#ah-violet)" d="M960 270 H1232"/>
+        <text class="wire-label" x="986" y="252">reads + changes</text>
+        <path class="wire" style="--c:#f8ee06" marker-end="url(#ah-yellow)" d="M1240 325 H968"/>
+        <text class="wire-label" x="986" y="362">results</text>
+      </g>
+
+      <!-- Step 4: the first request copies the prepared starter game; later requests edit the copy -->
+      <g data-step="4">
+        <g class="node" style="--c:#ff5bf4">
+          <rect x="2" y="456" width="452" height="164"/>
+          <text class="node-title" x="30" y="516">Starter game</text>
+          <text class="node-sub" x="30" y="560">prepared page, drawings</text>
+          <text class="node-sub" x="30" y="596">and first rules</text>
+        </g>
+        <path class="wire" style="--c:#ff5bf4" marker-end="url(#ah-magenta)" d="M454 538 H1150 V392 H1232"/>
+        <text class="wire-label" x="486" y="520">copied first — then you change it</text>
+      </g>
+
+      <!-- Step 5: browser -->
+      <g data-step="5">
+        <g class="node" style="--c:#3d9bff">
+          <rect x="1240" y="466" width="438" height="172"/>
+          <text class="node-title" x="1268" y="526">Browser</text>
+          <text class="node-sub" x="1268" y="570">loads the file,</text>
+          <text class="node-sub" x="1268" y="606">runs the game</text>
+        </g>
+        <path class="wire" style="--c:#f8ee06" marker-end="url(#ah-yellow)" d="M1460 425 V458"/>
+      </g>
+    </svg>
+    <p class="punch" data-step="6"><span class="tag" style="--c:var(--cyan)">The model can't see your screen. You are the tester.</span></p>
+  </section>
+
+  <!-- 9 · Play -->
+  <section class="slide" data-title="Play!" data-accent="green">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-mint" style="--x:1120px;--y:96px;--s:28px"></i>
+      <i class="sh sh-plus sh-plus--teal" style="--x:1330px;--y:84px;--s:46px;--delay:-3s"></i>
+      <i class="sh sh-sun" style="--x:1640px;--y:110px;--s:120px;--delay:-5s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--green)">Play</span>
+    </header>
+    <div class="headline"><h1 class="h1 fit">Open your game</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>In Finder</span><span class="dim">Double-click the file</span></div>
+      <div class="panel-body crumbs">
+        <span class="crumb">vibe-attic</span><i class="chev-sep" aria-hidden="true"></i>
+        <span class="crumb crumb--file">index.html</span>
+      </div>
+    </div>
+    <div class="play-row">
+      <div class="play-key"><kbd class="key key--space key--xl">space</kbd><span class="tag tag--lg" style="--c:var(--green)">= jump</span></div>
+      <ul class="notice">
+        <li>What ends the game?</li>
+        <li>When do you get a point?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10 · Change one number (manual experiment from ../docs/workshop-plan.md) -->
+  <section class="slide" data-title="Change one number" data-accent="orange">
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--orange)">Experiment · no AI needed</span>
+    </header>
+    <div class="headline headline--tight"><h1 class="h1 h1--sm fit">Change one number</h1></div>
+    <div class="split">
+      <ol class="todo">
+        <li><span class="badge badge--sm">1</span><span>Open <code>index.html</code> in the editor</span></li>
+        <li><span class="badge badge--sm">2</span><span>Find <code style="--c:var(--pink)">jumpSpeed: 650</code> under <code>EDIT: CONFIG</code></span></li>
+        <li><span class="badge badge--sm">3</span><span><b class="hl" style="--c:var(--orange)">Predict:</b> what happens if it's bigger?</span></li>
+        <li><span class="badge badge--sm">4</span><span>Change it to <code style="--c:var(--green)">780</code> · save · refresh</span></li>
+        <li><span class="badge badge--sm">5</span><span>Play. Were you right?</span></li>
+      </ol>
+      <svg class="jump" viewBox="0 0 880 560" role="img" aria-label="A jump: jump speed pushes the dinosaur up, gravity pulls it back down. A bigger jump speed makes a higher arc.">
+        <defs>
+          <marker id="ah-jump" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#ff2494"/></marker>
+          <marker id="ah-grav" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#3d9bff"/></marker>
+        </defs>
+        <path class="arc arc--new" d="M230 470 Q458 38 686 470"/>
+        <path class="arc" d="M230 470 Q420 170 610 470"/>
+        <text class="arc-label" x="458" y="228" fill="#04f05c">780</text>
+        <text class="arc-label" x="420" y="372" fill="#ffffff">650</text>
+        <g data-sprite="dino" data-cell="7" data-x="60" data-y="323"></g>
+        <g data-sprite="cactus" data-cell="7" data-x="400" data-y="407"></g>
+        <path class="force" stroke="#ff2494" marker-end="url(#ah-jump)" d="M137 306 V196"/>
+        <text class="force-label" x="137" y="172" fill="#ff2494">jumpSpeed</text>
+        <path class="force" stroke="#3d9bff" marker-end="url(#ah-grav)" d="M770 190 V306"/>
+        <text class="force-label" x="770" y="166" fill="#3d9bff">gravity</text>
+        <line class="ground-line" x1="0" y1="472" x2="880" y2="472"/>
+        <text class="ground-label" x="0" y="520">Ground</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 11 · Choose one new rule -->
+  <section class="slide" data-title="Choose one new rule" data-accent="magenta">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-lime" style="--x:1380px;--y:96px;--s:30px"></i>
+      <i class="sh sh-dash" style="--x:1428px;--y:105px;--w:80px;--h:12px"></i>
+      <i class="sh sh-dot-pink" style="--x:1680px;--y:92px;--s:32px;--delay:-4s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--magenta)">Prompt 2</span>
+    </header>
+    <div class="headline headline--tight"><h1 class="h1 h1--sm fit">Choose one new rule</h1></div>
+    <div class="cards">
+      <article class="card" style="--c:var(--violet)">
+        <div class="card-top"><span class="badge badge--md">A</span><span class="icon icon--jump" aria-hidden="true"><i></i><i></i></span></div>
+        <h2>Double jump</h2>
+        <p>Jump once more while you're in the air.</p>
+      </article>
+      <article class="card" style="--c:var(--yellow)">
+        <div class="card-top"><span class="badge badge--md">B</span><span class="icon icon--moon" aria-hidden="true"></span></div>
+        <h2>Moon mode</h2>
+        <p>Less gravity: jump higher, float longer.</p>
+      </article>
+      <article class="card" style="--c:var(--orange)">
+        <div class="card-top"><span class="badge badge--md">C</span><span class="icon icon--speed" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <h2>Faster and faster</h2>
+        <p>Cacti speed up every 5 points.</p>
+      </article>
+    </div>
+    <p class="punch"><span class="tag" style="--c:var(--magenta)">First say what should happen — and how you'll test it.</span></p>
+  </section>
+
+  <!-- 12 · Prompt 2A: double jump (../prompts/02a-double-jump.md) -->
+  <section class="slide" data-title="Prompt 2A · Double jump" data-accent="violet">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-caret" style="--x:1600px;--y:150px;--s:110px"></i>
+      <i class="sh sh-caret" style="--x:1600px;--y:80px;--s:110px;--delay:-1s"></i>
+      <i class="sh sh-dot-mint" style="--x:1440px;--y:100px;--s:28px;--delay:-4s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--violet)">Prompt 2 · Option A</span>
+    </header>
+    <div class="headline"><span class="badge">A</span><h1 class="h1 fit">Double jump</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Type this</span><span class="dim">…or say it your own way</span></div>
+      <div class="panel-body prompt">
+        <i class="prompt-mark" aria-hidden="true"></i>
+        <p class="prompt-text">Let my dinosaur jump once more while it's in the air. I should have to press Space again for the second jump.<i class="cursor" aria-hidden="true"></i></p>
+      </div>
+    </div>
+    <div class="test"><span class="tag" style="--c:var(--green)">Test it</span><p>Jump again in the air — then try a third jump before landing.</p></div>
+  </section>
+
+  <!-- 13 · Prompt 2B: Moon mode (../prompts/02b-moon-mode.md) -->
+  <section class="slide" data-title="Prompt 2B · Moon mode" data-accent="yellow">
+    <div class="decor" aria-hidden="true">
+      <span class="icon icon--moon icon--float" style="--x:1590px;--y:70px"></span>
+      <i class="sh sh-dot-lime" style="--x:1470px;--y:210px;--s:22px;--delay:-2s"></i>
+      <i class="sh sh-dot-pink" style="--x:1790px;--y:130px;--s:18px;--delay:-5s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--yellow)">Prompt 2 · Option B</span>
+    </header>
+    <div class="headline"><span class="badge">B</span><h1 class="h1 fit">Moon mode</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Type this</span><span class="dim">…or say it your own way</span></div>
+      <div class="panel-body prompt">
+        <i class="prompt-mark" aria-hidden="true"></i>
+        <p class="prompt-text">Add a Moon mode I can choose before playing. On the Moon, my dinosaur should jump higher and stay in the air longer.<i class="cursor" aria-hidden="true"></i></p>
+      </div>
+    </div>
+    <div class="test"><span class="tag" style="--c:var(--green)">Test it</span><p>Compare a normal jump with a Moon jump.</p></div>
+  </section>
+
+  <!-- 14 · Prompt 2C: progressive speed (../prompts/02c-progressive-speed.md) -->
+  <section class="slide" data-title="Prompt 2C · Faster and faster" data-accent="orange">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-chev" style="--x:1560px;--y:62px;--s:88px"></i>
+      <i class="sh sh-chev" style="--x:1632px;--y:62px;--s:88px;--delay:-1s"></i>
+      <i class="sh sh-chev" style="--x:1704px;--y:62px;--s:88px;--delay:-2s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--orange)">Prompt 2 · Option C</span>
+    </header>
+    <div class="headline"><span class="badge">C</span><h1 class="h1 fit">Faster and faster</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Type this</span><span class="dim">…or say it your own way</span></div>
+      <div class="panel-body prompt">
+        <i class="prompt-mark" aria-hidden="true"></i>
+        <p class="prompt-text">Make the cacti move a little faster every time I earn 5 points. Show how fast they are going. Start at normal speed when I play again.<i class="cursor" aria-hidden="true"></i></p>
+      </div>
+    </div>
+    <div class="test"><span class="tag" style="--c:var(--green)">Test it</span><p>Pass five cacti and watch the speed change — then restart.</p></div>
+  </section>
+
+  <!-- 15 · Repair sentence (../prompts/repair.md) -->
+  <section class="slide" data-title="Something broke?" data-accent="blue">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-plus" style="--x:1500px;--y:84px;--s:48px"></i>
+      <i class="sh sh-dot-coral" style="--x:1660px;--y:96px;--s:30px;--delay:-3s"></i>
+      <i class="sh sh-vline" style="--x:1838px;--y:150px;--h:110px;--delay:-5s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--blue)">Fix it</span>
+    </header>
+    <div class="headline"><h1 class="h1 fit">Something broke?</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>Tell it what you saw</span><span class="dim">Fill in the three blanks</span></div>
+      <div class="panel-body prompt">
+        <i class="prompt-mark" aria-hidden="true"></i>
+        <p class="prompt-text prompt-text--blanks">When I <span class="blank" style="--c:var(--pink)">what I did</span>, <span class="blank" style="--c:var(--orange)">what happened</span>. I expected <span class="blank" style="--c:var(--green)">what should have happened</span>. Please fix it.</p>
+      </div>
+    </div>
+    <div class="test"><span class="tag" style="--c:var(--blue)">Like this</span><p>When I <b class="hl" style="--c:var(--pink)">hold Space</b>, <b class="hl" style="--c:var(--orange)">the dinosaur keeps jumping</b>. I expected <b class="hl" style="--c:var(--green)">one jump per press</b>. Please fix it.</p></div>
+  </section>
+
+  <!-- 16 · Show and tell (closing question from ../docs/workshop-plan.md) -->
+  <section class="slide" data-title="Show and tell" data-accent="magenta">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-sun" style="--x:1530px;--y:330px;--s:190px"></i>
+      <i class="sh sh-dot-pink" style="--x:1440px;--y:300px;--s:34px;--delay:-4s"></i>
+      <i class="sh sh-plus" style="--x:1760px;--y:250px;--s:50px;--delay:-2s"></i>
+      <i class="sh sh-dot-lime" style="--x:1500px;--y:96px;--s:30px"></i>
+      <i class="sh sh-dash" style="--x:1548px;--y:105px;--w:80px;--h:12px"></i>
+      <i class="sh sh-chev" style="--x:1480px;--y:640px;--s:100px;--delay:-1s"></i>
+      <i class="sh sh-caret" style="--x:1640px;--y:650px;--s:100px;--delay:-5s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--magenta)">Share</span>
+    </header>
+    <div class="headline"><h1 class="h1 fit">Show and tell</h1></div>
+    <ol class="todo todo--xl">
+      <li><span class="badge">1</span><span><b class="hl" style="--c:var(--pink)">Show</b> something you changed</span></li>
+      <li><span class="badge">2</span><span><b class="hl" style="--c:var(--yellow)">Point</b> to the code that does it</span></li>
+      <li><span class="badge">3</span><span><b class="hl" style="--c:var(--green)">Explain</b> how you checked it</span></li>
+    </ol>
+  </section>
+
+  <footer class="rail" aria-hidden="true">
+    <span class="rail-label">Vibe coding</span>
+    <span class="rail-line"><i class="rail-fill" id="railFill"></i></span>
+    <span class="rail-count" id="railCount">01 / 16</span>
+  </footer>
+</main>
+
+<div class="overview" id="overview" hidden></div>
+<div class="blackout" id="blackout" hidden></div>
+<noscript><p style="color:#fff;font:24px sans-serif;padding:40px">These slides need JavaScript for navigation.</p></noscript>
+</body>
+</html>

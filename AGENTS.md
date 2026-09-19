@@ -21,7 +21,7 @@ When asked to build or change the game:
 - Use one animation loop with elapsed seconds capped at 0.05. Restart resets the game without starting another loop.
 - Ignore repeated Space key events and prevent page scrolling. Use rectangle collisions; let `showHitboxes` display those rectangles.
 - Check the changed behavior and restart. Say what you actually checked, and give one simple playtest. Never claim browser testing you did not perform.
-- Briefly explain which rule changed and where to find it. Leave the foundation, prompts, checkpoint originals, and workshop documents intact during game requests.
+- Briefly explain which rule changed and where to find it. Leave the foundation, prompts, checkpoint originals, `presentation/` slides, and workshop documents intact during game requests.
 
 ## Short step guides
 

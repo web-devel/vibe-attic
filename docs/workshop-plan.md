@@ -17,7 +17,7 @@ During this workshop, kids will use AI to help build a simple computer game. Ins
 - The foundation, working game, and each save point are single HTML files containing their own CSS, JavaScript, and drawings. The working game is `index.html` in the repository root.
 - Kids type short prompts describing the game or the change they want. Example wording lives in `prompts/`; implementation constraints and defaults live in the root `AGENTS.md`, loaded by the coding agent. The examples are guides, not mandatory wording.
 - Short step guides live directly in `AGENTS.md`. The agent follows the matching step, reuses the embedded resources in `foundation/runner.html`, and preserves existing work. Describe supplied code and generated changes accurately.
-- A presentation is wanted later. It has not been created yet.
+- A first version of the TV slides is in [`presentation/`](../presentation/index.html): laptop setup steps, the prompts, the architecture diagram, and the closing question. It still needs rehearsal timings and code from a verified game.
 
 Group size, individual versus paired work, teaching language, and prior coding experience remain open. Candidate timings, prompts, parameter values, and optional features should be adjusted after rehearsal.
 
@@ -129,4 +129,4 @@ The [save-point guide](../checkpoints/README.md) links to a prepared baseline, a
 
 If inference fails, explain that the group is using a prepared AI-assisted version, then continue the manual experiment and inspection. Stop pending agent edits and back up the participant's current `index.html`. Copy the chosen HTML save point to `index.html` in the repository root, then continue editing that copy. No format change is needed. See [recovery steps](../checkpoints/README.md).
 
-After rehearsal, prepare the presentation around one architecture diagram revealed in steps, one jump diagram, a before/after change, and the closing question: “Show something you changed, point to the code responsible, and explain how you checked it.” Use actual code from the verified game. Finalize student prompt cards, facilitator notes, and save points together so they refer to the same version.
+The slides in `presentation/` already have the architecture diagram revealed in steps, including the starter-game copy, a jump diagram, and the closing question: “Show something you changed, point to the code responsible, and explain how you checked it.” After rehearsal, add a before/after change using actual code from the verified game, and adjust the setup steps and prompts to match what worked. Finalize student prompt cards, facilitator notes, and save points together so they refer to the same version.
