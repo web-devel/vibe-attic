@@ -1,10 +1,10 @@
 # Prompts for the kids
 
-These are short examples kids can type themselves. They can use their own words and choose what they want the game to do. Each linked prompt file contains only the message to type. The examples still need M1 rehearsal.
+These are one-sentence examples kids can type themselves. They can use their own words and choose what they want the game to do. Each linked prompt file contains only the message to type. The examples still need M1 rehearsal.
 
-The facilitator prepares the [agent instructions](../AGENTS.md) beforehand. Kids do not need to type technical setup details. See the [rehearsal guide](../docs/m1-rehearsal.md) for setup and checks.
+The facilitator prepares the [agent instructions](../AGENTS.md) beforehand. Kids do not need to type technical setup details or spell out every rule: the baseline rules and the details of each feature live there. See the [rehearsal guide](../docs/m1-rehearsal.md) for setup and checks.
 
-The first request now reuses the [ready game foundation](../foundation/README.md). Later requests generate small edits using the short steps in `AGENTS.md`. The prompt examples below keep the same wording.
+The first request reuses the [ready game foundation](../foundation/README.md). Later requests generate small edits using the short steps in `AGENTS.md`. Keep any new example this short. Kids say the details aloud before typing; anything the agent must know belongs in `AGENTS.md`.
 
 ## Build, play, change
 

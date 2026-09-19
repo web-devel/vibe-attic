@@ -404,23 +404,23 @@ kbd { font-family: var(--sans); }
   flex: none;
   width: 36px;
   height: 56px;
-  margin-top: 13px;
+  margin-top: 22px;
   background: linear-gradient(180deg, #ee7f43, #ea4d84);
   clip-path: polygon(0 14%, 21.9% 0, 100% 50%, 21.9% 100%, 0 86%, 56.25% 50%);
 }
 
 .prompt-text {
   margin: 0;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 600;
-  line-height: 1.32;
+  line-height: 1.25;
   letter-spacing: -.005em;
-  text-wrap: pretty;
+  text-wrap: balance;
   user-select: text;
   -webkit-user-select: text;
 }
 
-.prompt-text--blanks { line-height: 1.55; }
+.prompt-text--blanks { font-size: 60px; line-height: 1.55; text-wrap: pretty; }
 
 .blank {
   --c: var(--pink);

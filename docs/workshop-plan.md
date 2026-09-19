@@ -15,7 +15,7 @@ During this workshop, kids will use AI to help build a simple computer game. Ins
 - Teach generic roles and concepts. Product names belong in setup notes, not the teaching narrative.
 - Keep prompts and intermediate results in this repo so slow or failed inference does not stop the session.
 - The foundation, working game, and each save point are single HTML files containing their own CSS, JavaScript, and drawings. The working game is `index.html` in the repository root.
-- Kids type short prompts describing the game or the change they want. Example wording lives in `prompts/`; implementation constraints and defaults live in the root `AGENTS.md`, loaded by the coding agent. The examples are guides, not mandatory wording.
+- Kids type one-sentence prompts naming the game or the change they want. Example wording lives in `prompts/`; baseline rules, implementation constraints, and defaults live in the root `AGENTS.md`, loaded by the coding agent. The examples are guides, not mandatory wording.
 - Short step guides live directly in `AGENTS.md`. The agent follows the matching step, reuses the embedded resources in `foundation/runner.html`, and preserves existing work. Describe supplied code and generated changes accurately.
 - A first version of the TV slides is in [`presentation/`](../presentation/index.html): laptop setup steps, the prompts, the architecture diagram, and the closing question. It still needs rehearsal timings and code from a verified game.
 
@@ -70,7 +70,7 @@ If the game finishes early, leave it ready until the explanation ends. If it is 
 
 The coding assistant combines a harness with a model connection. The model itself does not directly edit the filesystem. The harness executes requested actions and may ask the model for another response using their results.
 
-Show that the child's short request is only part of the context: the harness also loads the prepared project instructions. That one file contains the web stack, single-file format, useful defaults, and short step guides. The first step points to a prepared foundation containing the page, drawings, and baseline rules. Show the copy separately from the later generated rule edit. The child chooses the desired behavior without needing to repeat that setup. Include this in the later presentation so the result is not presented as coming from the short prompt alone.
+Show that the child's short request is only part of the context: the harness also loads the prepared project instructions. That one file contains the web stack, single-file format, baseline rules, useful defaults, and short step guides. The first step points to a prepared foundation containing the page, drawings, and baseline rules. Show the copy separately from the later generated rule edit. The child chooses the desired behavior without needing to repeat that setup. Include this in the later presentation so the result is not presented as coming from the short prompt alone.
 
 ```mermaid
 flowchart LR

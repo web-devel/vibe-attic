@@ -14,6 +14,7 @@ When asked to build or change the game:
 - Use plain browser features and a 2D canvas. No libraries, packages, build tools, external assets, or network requests. The file must work when opened directly.
 - Use your file tools to make changes. Do not just print the code in chat.
 - Follow the child's requested rules. Add only requested features, and preserve their existing changes.
+- Baseline rules, unless the child asks otherwise: Space makes the dinosaur jump, touching a cactus ends the run, each passed cactus earns one point, and a restart button resets the game.
 - Make small edits. Start at `EDIT: CONFIG` or `EDIT: RULES`; read the page and drawings only when needed. Do not load all checkpoints or run their generator.
 - Keep code small and readable, with named functions and short comments for input, jumping, collisions, and drawing.
 - Put editable values in a `CONFIG` object near the start of the script. Start with `runSpeed: 300`, `jumpSpeed: 650`, `gravity: 2000`, `minObstacleGap: 1.4`, `maxObstacleGap: 2.0`, and `showHitboxes: false`. Preserve later edits.
@@ -25,7 +26,7 @@ When asked to build or change the game:
 
 ## Short step guides
 
-Use only the step the child requests. Their wording and values take priority over these examples.
+Requests are short, so the matching step supplies the details. Use only the step the child requests. Their wording and values take priority over these examples.
 
 ### 1. Start the game
 
