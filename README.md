@@ -2,7 +2,7 @@
 
 A 45–60 minute workshop for kids aged 9–15: use AI to build a small dinosaur runner, look under the hood, and change its behavior on purpose.
 
-The game uses **HTML, CSS, and JavaScript**, with a canvas for drawing. The planned workshop setup is an M1 MacBook with Pi and a locally running Qwen 3.6 model. The lesson explains the roles of the model, runtime, harness, generated code, and browser without focusing on product names.
+The game uses **HTML, CSS, and JavaScript**, with a canvas for drawing. The planned workshop setup is an M1 MacBook with Pi, started through Ollama, and the locally running `qwen3.5:9b` model. The lesson explains the roles of the model, runtime, harness, generated code, and browser without focusing on product names.
 
 ## Start here
 
@@ -14,7 +14,7 @@ The game uses **HTML, CSS, and JavaScript**, with a canvas for drawing. The plan
 - [Playable save points](checkpoints/README.md)
 - [Ready game foundation and extracted resources](foundation/README.md)
 
-For a first rehearsal, launch Pi in this repository's root and type [the short build prompt](prompts/01-build-runner.md). The agent copies the prepared [foundation](foundation/runner.html) to `index.html` if no working game exists. Kids then make the manual jump experiment and request one small rule change. The page, styles, and canvas drawings are already supplied; the local model edits only the requested behavior. Existing working games are preserved.
+For a first rehearsal, run `ollama launch pi` in this repository's root, select `qwen3.5:9b` from the model list, and type [the short build prompt](prompts/01-build-runner.md). The agent copies the prepared [foundation](foundation/runner.html) to `index.html` if no working game exists. Kids then make the manual jump experiment and request one small rule change. The page, styles, and canvas drawings are already supplied; the local model edits only the requested behavior. Existing working games are preserved.
 
 Kids type their own requests; the technical details and short step guides live together in `AGENTS.md`, which Pi loads automatically. The working game remains one offline `index.html` with embedded CSS and JavaScript. Explain that the first step reuses prepared code and later steps generate edits. Full generation from scratch remains an explicit rehearsal option.
 

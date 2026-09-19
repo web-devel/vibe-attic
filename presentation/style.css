@@ -345,7 +345,7 @@ kbd { font-family: var(--sans); }
 }
 
 .grid-table th { padding: 18px 34px 16px; font-size: 36px; font-weight: 800; letter-spacing: .04em; }
-.grid-table td { position: relative; height: 146px; padding: 0 34px; letter-spacing: .01em; }
+.grid-table td { position: relative; height: 126px; padding: 0 34px; letter-spacing: .01em; }
 .grid-table td:first-child { padding-right: 60px; }
 
 .grid-table code {

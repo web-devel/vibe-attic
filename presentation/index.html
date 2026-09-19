@@ -56,7 +56,7 @@
     </div>
     <header class="slide-head">
       <span class="tag" style="--c:var(--yellow)">Get ready</span>
-      <div class="stepper"><span>Step 1 / 4</span><ol class="dots"><li class="on"></li><li></li><li></li><li></li></ol></div>
+      <div class="stepper"><span>Step 1 / 5</span><ol class="dots"><li class="on"></li><li></li><li></li><li></li><li></li></ol></div>
     </header>
     <div class="headline"><span class="badge">1</span><h1 class="h1 fit">Log in</h1></div>
     <div class="panel">
@@ -78,7 +78,7 @@
     </div>
     <header class="slide-head">
       <span class="tag" style="--c:var(--yellow)">Get ready</span>
-      <div class="stepper"><span>Step 2 / 4</span><ol class="dots"><li class="on"></li><li class="on"></li><li></li><li></li></ol></div>
+      <div class="stepper"><span>Step 2 / 5</span><ol class="dots"><li class="on"></li><li class="on"></li><li></li><li></li><li></li></ol></div>
     </header>
     <div class="headline"><span class="badge">2</span><h1 class="h1 fit">Open Terminal</h1></div>
     <div class="panel">
@@ -115,7 +115,7 @@
     </div>
     <header class="slide-head">
       <span class="tag" style="--c:var(--yellow)">Get ready</span>
-      <div class="stepper"><span>Step 3 / 4</span><ol class="dots"><li class="on"></li><li class="on"></li><li class="on"></li><li></li></ol></div>
+      <div class="stepper"><span>Step 3 / 5</span><ol class="dots"><li class="on"></li><li class="on"></li><li class="on"></li><li></li><li></li></ol></div>
     </header>
     <div class="headline"><span class="badge">3</span><h1 class="h1 fit">Go to the project</h1></div>
     <div class="panel">
@@ -136,7 +136,7 @@
     </div>
     <header class="slide-head">
       <span class="tag" style="--c:var(--yellow)">Get ready</span>
-      <div class="stepper"><span>Step 4 / 4</span><ol class="dots"><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li></ol></div>
+      <div class="stepper"><span>Step 4 / 5</span><ol class="dots"><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li></li></ol></div>
     </header>
     <div class="headline"><span class="badge">4</span><h1 class="h1 fit">Start your assistant</h1></div>
     <div class="panel">
@@ -148,7 +148,42 @@
     <div class="after"><span>Then press</span><kbd class="key key--wide"><b>⏎</b> Enter</kbd></div>
   </section>
 
-  <!-- 6 · Ready check -->
+  <!-- 6 · Get ready: pick the model from the list that ollama launch pi shows -->
+  <section class="slide" data-title="Get ready 5 · Pick the model" data-accent="yellow">
+    <div class="decor" aria-hidden="true">
+      <i class="sh sh-dot-lime" style="--x:1120px;--y:96px;--s:30px"></i>
+      <i class="sh sh-dash" style="--x:1168px;--y:105px;--w:80px;--h:12px"></i>
+      <i class="sh sh-plus" style="--x:1300px;--y:84px;--s:46px;--delay:-4s"></i>
+      <i class="sh sh-caret" style="--x:1720px;--y:815px;--s:96px;--delay:-2s"></i>
+    </div>
+    <header class="slide-head">
+      <span class="tag" style="--c:var(--yellow)">Get ready</span>
+      <div class="stepper"><span>Step 5 / 5</span><ol class="dots"><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li><li class="on"></li></ol></div>
+    </header>
+    <div class="headline"><span class="badge">5</span><h1 class="h1 fit">Pick the model</h1></div>
+    <div class="panel">
+      <div class="panel-head"><span>A list appears — find this line</span><span class="dim">It's the name of our AI model</span></div>
+      <div class="panel-body flow">
+        <div class="flow-item">
+          <span class="flow-cap">Move with</span>
+          <div class="flow-keys"><kbd class="key"><b>↑</b></kbd><kbd class="key"><b>↓</b></kbd></div>
+        </div>
+        <i class="chev-sep" aria-hidden="true"></i>
+        <div class="flow-item">
+          <span class="flow-cap">Until you are on</span>
+          <span class="cmd cmd--md" style="--c:var(--green)">qwen3.5:9b</span>
+        </div>
+        <i class="chev-sep" aria-hidden="true"></i>
+        <div class="flow-item">
+          <span class="flow-cap">Press</span>
+          <kbd class="key key--wide"><b>⏎</b> Enter</kbd>
+        </div>
+      </div>
+    </div>
+    <div class="after"><span>Your assistant starts</span><span class="dim">Now you can type to it.</span></div>
+  </section>
+
+  <!-- 7 · Ready check -->
   <section class="slide" data-title="Ready check" data-accent="yellow">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-sun" style="--x:1560px;--y:250px;--s:170px"></i>
@@ -159,7 +194,7 @@
     </div>
     <header class="slide-head">
       <span class="tag" style="--c:var(--yellow)">Get ready</span>
-      <div class="stepper"><span>All four steps</span></div>
+      <div class="stepper"><span>All five steps</span></div>
     </header>
     <div class="split split--table">
       <table class="grid-table">
@@ -169,6 +204,7 @@
           <tr><td><span class="ring">2</span>Open Terminal</td><td><span class="mini-keys"><kbd>⌘</kbd>+<kbd>space</kbd></span> <code style="--c:var(--green)">terminal</code></td></tr>
           <tr><td><span class="ring">3</span>Go to the project</td><td><code style="--c:var(--green)">cd vibe-attic</code></td></tr>
           <tr><td><span class="ring">4</span>Start your assistant</td><td><code style="--c:var(--green)">ollama launch pi</code></td></tr>
+          <tr><td><span class="ring">5</span>Pick the model</td><td><span class="mini-keys"><kbd>↑</kbd><kbd>↓</kbd></span> <code style="--c:var(--green)">qwen3.5:9b</code></td></tr>
         </tbody>
       </table>
       <div class="ready-call">
@@ -177,7 +213,7 @@
     </div>
   </section>
 
-  <!-- 7 · Prompt 1: start (../prompts/01-build-runner.md). The assistant copies foundation/runner.html to index.html. -->
+  <!-- 8 · Prompt 1: start (../prompts/01-build-runner.md). The assistant copies foundation/runner.html to index.html. -->
   <section class="slide" data-title="Prompt 1 · Start your game" data-accent="pink">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-dot-lime" style="--x:1180px;--y:96px;--s:30px"></i>
@@ -199,7 +235,7 @@
     <div class="after"><span>Then press</span><kbd class="key key--wide"><b>⏎</b> Enter</kbd><span class="dim">It begins with a prepared starter game. You change the rules next.</span></div>
   </section>
 
-  <!-- 8 · What is happening inside? (diagram from ../docs/workshop-plan.md, revealed in steps; the starter-game copy is its own step) -->
+  <!-- 9 · What is happening inside? (diagram from ../docs/workshop-plan.md, revealed in steps; the starter-game copy is its own step) -->
   <section class="slide" data-title="What is happening inside?" data-accent="cyan">
     <header class="slide-head">
       <span class="tag" style="--c:var(--cyan)">While it gets ready</span>
@@ -297,7 +333,7 @@
     <p class="punch" data-step="6"><span class="tag" style="--c:var(--cyan)">The model can't see your screen. You are the tester.</span></p>
   </section>
 
-  <!-- 9 · Play -->
+  <!-- 10 · Play -->
   <section class="slide" data-title="Play!" data-accent="green">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-dot-mint" style="--x:1120px;--y:96px;--s:28px"></i>
@@ -324,7 +360,7 @@
     </div>
   </section>
 
-  <!-- 10 · Change one number (manual experiment from ../docs/workshop-plan.md) -->
+  <!-- 11 · Change one number (manual experiment from ../docs/workshop-plan.md) -->
   <section class="slide" data-title="Change one number" data-accent="orange">
     <header class="slide-head">
       <span class="tag" style="--c:var(--orange)">Experiment · no AI needed</span>
@@ -359,7 +395,7 @@
     </div>
   </section>
 
-  <!-- 11 · Choose one new rule -->
+  <!-- 12 · Choose one new rule -->
   <section class="slide" data-title="Choose one new rule" data-accent="magenta">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-dot-lime" style="--x:1380px;--y:96px;--s:30px"></i>
@@ -390,7 +426,7 @@
     <p class="punch"><span class="tag" style="--c:var(--magenta)">First say what should happen — and how you'll test it.</span></p>
   </section>
 
-  <!-- 12 · Prompt 2A: double jump (../prompts/02a-double-jump.md) -->
+  <!-- 13 · Prompt 2A: double jump (../prompts/02a-double-jump.md) -->
   <section class="slide" data-title="Prompt 2A · Double jump" data-accent="violet">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-caret" style="--x:1600px;--y:150px;--s:110px"></i>
@@ -411,7 +447,7 @@
     <div class="test"><span class="tag" style="--c:var(--green)">Test it</span><p>Jump again in the air — then try a third jump before landing.</p></div>
   </section>
 
-  <!-- 13 · Prompt 2B: Moon mode (../prompts/02b-moon-mode.md) -->
+  <!-- 14 · Prompt 2B: Moon mode (../prompts/02b-moon-mode.md) -->
   <section class="slide" data-title="Prompt 2B · Moon mode" data-accent="yellow">
     <div class="decor" aria-hidden="true">
       <span class="icon icon--moon icon--float" style="--x:1590px;--y:70px"></span>
@@ -432,7 +468,7 @@
     <div class="test"><span class="tag" style="--c:var(--green)">Test it</span><p>Compare a normal jump with a Moon jump.</p></div>
   </section>
 
-  <!-- 14 · Prompt 2C: progressive speed (../prompts/02c-progressive-speed.md) -->
+  <!-- 15 · Prompt 2C: progressive speed (../prompts/02c-progressive-speed.md) -->
   <section class="slide" data-title="Prompt 2C · Faster and faster" data-accent="orange">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-chev" style="--x:1560px;--y:62px;--s:88px"></i>
@@ -453,7 +489,7 @@
     <div class="test"><span class="tag" style="--c:var(--green)">Test it</span><p>Pass five cacti and watch the speed change — then restart.</p></div>
   </section>
 
-  <!-- 15 · Repair sentence (../prompts/repair.md) -->
+  <!-- 16 · Repair sentence (../prompts/repair.md) -->
   <section class="slide" data-title="Something broke?" data-accent="blue">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-plus" style="--x:1500px;--y:84px;--s:48px"></i>
@@ -474,7 +510,7 @@
     <div class="test"><span class="tag" style="--c:var(--blue)">Like this</span><p>When I <b class="hl" style="--c:var(--pink)">hold Space</b>, <b class="hl" style="--c:var(--orange)">the dinosaur keeps jumping</b>. I expected <b class="hl" style="--c:var(--green)">one jump per press</b>. Please fix it.</p></div>
   </section>
 
-  <!-- 16 · Show and tell (closing question from ../docs/workshop-plan.md) -->
+  <!-- 17 · Show and tell (closing question from ../docs/workshop-plan.md) -->
   <section class="slide" data-title="Show and tell" data-accent="magenta">
     <div class="decor" aria-hidden="true">
       <i class="sh sh-sun" style="--x:1530px;--y:330px;--s:190px"></i>
@@ -499,7 +535,7 @@
   <footer class="rail" aria-hidden="true">
     <span class="rail-label">Vibe coding</span>
     <span class="rail-line"><i class="rail-fill" id="railFill"></i></span>
-    <span class="rail-count" id="railCount">01 / 16</span>
+    <span class="rail-count" id="railCount">01 / 17</span>
   </footer>
 </main>
 

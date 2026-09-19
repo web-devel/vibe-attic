@@ -25,15 +25,17 @@ Fill this in before the first run:
 | Thinking and sampling settings, if applicable | |
 | Power connected; other apps open | |
 
-The planned agent is Pi and the planned model family is Qwen 3.6. Exact model size and available memory are not settled. Do not assume all M1 configurations behave alike or that a successful chat response proves tool calling works.
+The planned agent is Pi, started with `ollama launch pi`, and the planned model is `qwen3.5:9b`. Available memory is not settled. Do not assume all M1 configurations behave alike or that a successful chat response proves tool calling works.
 
 ## Connect and check the agent
 
-Use the existing installation; this guide does not choose an inference runtime or prescribe a model download. Start the local runtime, load the intended model, then configure/select its local provider in Pi. Confirm the endpoint is on the laptop and that no cloud fallback is selected.
+Use the existing installation; this guide does not prescribe a model download. The workshop starts Pi through Ollama: `ollama launch pi` sets Ollama up as Pi's provider, so no manual provider configuration should be needed. Confirm the endpoint is on the laptop and that no cloud fallback is selected.
 
-Pi documents custom local providers in `~/.pi/agent/models.json` and selection through `/model`. Use the exact model identifier exposed by the runtime. The API format, port, context limits, and any compatibility settings must match that runtime. Follow the [official custom-model documentation](https://pi.dev/docs/latest/models) rather than guessing these values. Some keyless local endpoints still require a dummy authentication value in Pi's configuration; that is configuration, not a cloud subscription requirement. Documentation consulted on 2026-09-19; check it against the installed version.
+For a manual setup instead, Pi documents custom local providers in `~/.pi/agent/models.json` and selection through `/model`. Use the exact model identifier exposed by the runtime. The API format, port, context limits, and any compatibility settings must match that runtime. Follow the [official custom-model documentation](https://pi.dev/docs/latest/models) rather than guessing these values. Some keyless local endpoints still require a dummy authentication value in Pi's configuration; that is configuration, not a cloud subscription requirement. Documentation consulted on 2026-09-19; check it against the installed version.
 
-Open a terminal at the root of your local copy of this repository and launch `pi`. Select the intended local model.
+Open a terminal at the root of your local copy of this repository and run `ollama launch pi`, as the kids will. When the model list appears, move to `qwen3.5:9b` with the arrow keys and press Enter. The list can also offer cloud models, such as `qwen3.5:cloud`; make sure the local one is chosen.
+
+Ollama shows that list only while no usable model is saved for Pi; after one has been chosen, later launches reuse it without asking. Rehearse on the workshop account to see which the kids will get. The slides include the selection as setup step 5. If every laptop has the model saved beforehand, for example with `ollama launch pi --config`, check whether that step can be dropped. Behavior read from the Ollama source on 2026-09-19; confirm it against the installed version.
 
 ### Load the prepared instructions
 
